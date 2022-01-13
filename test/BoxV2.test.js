@@ -1,0 +1,25 @@
+const { expect } = require('chai');
+ 
+let BoxV2;
+let boxV2;
+ 
+
+describe('BoxV2', function () {
+  beforeEach(async function () {
+    BoxV2 = await ethers.getContractFactory("BoxV2");
+    boxV2 = await BoxV2.deploy();
+    await boxV2.deployed();
+  });
+ 
+
+  it('retrieve returns a value previously stored', async function () {
+    await boxV2.store(42);
+    expect((await boxV2.retrieve()).toString()).to.equal('42');
+  });
+ 
+  it('retrieve returns a value previously incremented', async function () {
+    await boxV2.increment();
+    // Note that we need to use strings to compare the 256 bit integers
+    expect((await boxV2.retrieve()).toString()).to.equal('1');
+  });
+});

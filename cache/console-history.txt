@@ -1,0 +1,12 @@
+.exit
+(await box.retrieve()).toString()
+const box = await Box.attach("0x61b2Ee77f43471eDa7A2A71471DF8658E6CAC65A")
+const Box = await ethers.getContractFactory("Box")
+.exit
+cls
+const box = await Box.attach("0x61b2Ee77f43471eDa7A2A71471DF8658E6CAC65A")
+const box = await Box.attach(0x61b2Ee77f43471eDa7A2A71471DF8658E6CAC65A)
+const Box = await ethers.getContractFactory("Box")
+const box = await Box.attach(0x61b2Ee77f43471eDa7A2A71471DF8658E6CAC65A)
+const box = await Box.attach
+const Box = await ethers.getContractFactory("Box")
